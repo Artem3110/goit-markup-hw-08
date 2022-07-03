@@ -24,6 +24,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #FFFFFF;
@@ -51,7 +55,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 320px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -93,7 +97,6 @@ body {
   height: 44px;
   margin-right: 10px;
 }
-
 .soc__item:last-child {
   margin-right: 0px;
 }
@@ -111,6 +114,14 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
+.soc__link:hover, .soc__link:focus {
+  background-color: #2196F3;
+}
+.soc__link:hover .soc__icon,
+.soc__link:hover .soc__icon, .soc__link:focus .soc__icon,
+.soc__link:focus .soc__icon {
+  fill: #FFFFFF;
+}
 
 .soc__icon {
   fill: #AFB1B8;
@@ -118,16 +129,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
-}
-
-.soc__link:hover,
-.soc__link:focus {
-  background-color: #2196F3;
-}
-
-.soc__link:hover .soc__icon,
-.soc__link:focus .soc__icon {
-  fill: #FFFFFF;
 }
 
 .backdrop {
@@ -138,8 +139,7 @@ body {
   background-color: rgba(25, 38, 28, 0.4);
   transition: opacity 500ms, visibility 500ms;
 }
-
-.backdrop.is-hidden .modal {
+.backdrop .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(180deg);
 }
 
@@ -208,14 +208,17 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
+.modal-input:hover, .modal-input:focus {
+  border-color: #2196F3;
+}
+.modal-input:hover + .modal-icon,
+.modal-input:hover + .modal-icon, .modal-input:focus + .modal-icon,
+.modal-input:focus + .modal-icon {
+  fill: #2196F3;
+}
 
 .modal-field {
   margin-bottom: 10px;
-}
-
-.modal-input:hover,
-.modal-input:focus {
-  border-color: #2196F3;
 }
 
 .input-wrap {
@@ -232,14 +235,7 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.modal-icon:hover,
-.modal-icon:focus {
-  fill: #2196F3;
-}
-
-.modal-input:hover + .modal-icon,
-.modal-input:focus + .modal-icon {
+.modal-icon:hover, .modal-icon:focus {
   fill: #2196F3;
 }
 
@@ -268,12 +264,9 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.modal-text:hover,
-.modal-text:focus {
+.modal-text:hover, .modal-text:focus {
   border-color: #2196F3;
 }
-
 .modal-text::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -363,9 +356,7 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:hover, .modal-btn:focus {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -421,7 +412,6 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
 .nav__link.current::after {
   content: "";
   position: absolute;
@@ -432,9 +422,8 @@ body {
   left: 0;
   bottom: -34px;
 }
-
-.nav__item:not(:last-child) {
-  margin-right: 50px;
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
 }
 
 .nav__item {
@@ -443,9 +432,14 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.connect__item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
+}
+.nav__item:hover .connect__mail, .nav__item:focus .connect__mail {
+  fill: var(--accent-color);
+}
+.nav__item:hover .connect__tel, .nav__item:focus .connect__tel {
+  fill: var(--accent-color);
 }
 
 .connect__item {
@@ -454,6 +448,9 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
+}
+.connect__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .connect {
@@ -471,38 +468,8 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.connect__mail {
-  fill: currentColor;
-}
-
-.connect__tel {
-  fill: currentColor;
-}
-
-.nav__link:hover,
-.nav__link:focus {
+.connect__link:hover, .connect__link:focus {
   color: var(--accent-color);
-}
-
-.connect__mail:hover,
-.connect__mail:focus {
-  color: var(--accent-color);
-}
-
-.nav__item:hover .connect__mail,
-.nav__item:focus .connect__mail {
-  fill: var(--accent-color);
-}
-
-.connect__link:hover,
-.connect__link:focus {
-  color: var(--accent-color);
-}
-
-.nav__item:hover .connect__tel,
-.nav__item:focus .connect__tel {
-  fill: var(--accent-color);
 }
 
 .connect__mail {
@@ -517,6 +484,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
+  fill: currentColor;
 }
 
 .connect__tel {
@@ -531,6 +499,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
+  fill: currentColor;
 }
 
 .hero {
@@ -581,9 +550,7 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:hover, .hero-btn:focus {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -698,6 +665,8 @@ body {
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-left: -30px;
 }
 
@@ -920,14 +889,12 @@ body {
   background-color: #2F303A;
   cursor: pointer;
 }
-
 .footer-input::placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  /* identical to box height, or 125% */
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
@@ -960,9 +927,7 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
 }
-
-.footer-btn:hover,
-.footer-btn:focus {
+.footer-btn:hover, .footer-btn:focus {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -987,12 +952,9 @@ body {
 }
 
 .portfolio-list {
-  margin-top: 50px;
-}
-
-.portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
   margin-left: -30px;
   margin-bottom: -30px;
 }
@@ -1007,6 +969,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
+}
+.portfolio-item:hover, .portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-item:hover .portfolio-top-text, .portfolio-item:focus .portfolio-top-text {
+  transform: translateY(0);
 }
 
 .portfolio-top-wrap {
@@ -1038,10 +1006,6 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-top-text {
-  transform: translateY(0);
-}
-
 .portfolio-btn {
   color: #212121;
   width: 128px;
@@ -1052,16 +1016,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
-
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-  color: #FFFFFF;
-  background-color: #2196F3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-btn-all:hover,
-.portfolio-btn-all:focus {
+.portfolio-btn:hover, .portfolio-btn:focus {
   color: #FFFFFF;
   background-color: #2196F3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1077,6 +1032,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
+}
+.portfolio-btn-all:hover, .portfolio-btn-all:focus {
+  color: #FFFFFF;
+  background-color: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-text {
@@ -1098,11 +1058,6 @@ body {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-}
-
-.portfolio-item:hover,
-.portfolio-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .clients {
