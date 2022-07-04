@@ -1,21 +1,47 @@
+.pec {
+   
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 47px;
+    }
+}
+
+
+
 .pec-text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
 
     color: var(--contet-title-color);
-}
+
+    @include tablet {
+        text-align: center;
+    }
+    
+    @include desktop {
+        text-align: left;
+    }
 
 
-.pec {
-    padding-top: 94px;
-    padding-bottom: 47px;
 }
+
 
 .pec-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 
@@ -24,17 +50,34 @@
     line-height: 1.71;
 
     padding-top: 10px;
+
+    width: 450px;
+
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop {
+        width: 270px;
+    }
 }
 
-.pec-item:not(:last-child) {
-    margin-right: 30px;
+.pec-item {
+    width: 100%;
+
+    @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+
+    @include desktop {
+            width: calc((100% - 90px) / 4);
+        }
 }
 
 .pec-item::before {
     display: block;
     content: "";
     height: 120px;
-    outline: 1px solid red;
     background: #F5F4FA;
     border-radius: 4px;
     background-repeat: no-repeat;
@@ -58,6 +101,3 @@
     background-image: url(../images/astronaut-pec.svg);
 }
 
-.bottom-text {
-    width: 270px;
-}

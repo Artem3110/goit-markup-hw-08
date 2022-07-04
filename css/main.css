@@ -74,7 +74,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 768px;
+    width: 1200px;
   }
 }
 
@@ -584,39 +584,84 @@ body {
   border-radius: 4px;
 }
 
+.pec {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .pec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pec {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+}
+
 .pec-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--contet-title-color);
 }
-
-.pec {
-  padding-top: 94px;
-  padding-bottom: 47px;
+@media screen and (min-width: 768px) {
+  .pec-text {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pec-text {
+    text-align: left;
+  }
 }
 
 .pec-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .pec-bottom-text {
   font-size: 14px;
   line-height: 1.71;
   padding-top: 10px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .pec-bottom-text {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pec-bottom-text {
+    width: 270px;
+  }
 }
 
-.pec-item:not(:last-child) {
-  margin-right: 30px;
+.pec-item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pec-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pec-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .pec-item::before {
   display: block;
   content: "";
   height: 120px;
-  outline: 1px solid red;
   background: #F5F4FA;
   border-radius: 4px;
   background-repeat: no-repeat;
@@ -638,10 +683,6 @@ body {
 
 .pec-icon-astronaut::before {
   background-image: url(../images/astronaut-pec.svg);
-}
-
-.bottom-text {
-  width: 270px;
 }
 
 .work {
