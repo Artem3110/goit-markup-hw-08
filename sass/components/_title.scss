@@ -6,4 +6,14 @@
     letter-spacing: 0.03em;
 
     color: #212121;
+
+    @include tablet {
+        font-size: 28px;
+        line-height: 1.17; 
+    }
+        
+     @include desktop {
+        font-size: 36px;
+        line-height: 1.16;;
+    }
 }

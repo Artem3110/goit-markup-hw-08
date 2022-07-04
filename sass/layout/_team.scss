@@ -1,17 +1,31 @@
 .team {
     background-color: #F5F4FA;
 
-    //padding-top: 94px;
-    //padding-bottom: 94px;
-
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .team__title {
-    //margin-bottom: 50px;
 
     margin-bottom: 30px;
+
+    @include tablet {
+            margin-bottom: 30px;
+        }
+    
+    @include desktop {
+            margin-bottom: 50px;
+        }
 }
 
 .team__list {
@@ -30,11 +44,11 @@
     border-radius: 0px 0px 4px 4px;
     //margin-bottom: 30px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
             width: calc((100% - 30px) / 2);
         }
 
-     @media screen and (min-width: 1200px) {
+     @include desktop {
             width: calc((100% - 90px) / 4);
         }
 }
