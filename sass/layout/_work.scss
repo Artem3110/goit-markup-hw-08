@@ -1,13 +1,28 @@
 .work {
-    padding-top: 47px;
-    padding-bottom: 94px;
+
+    display: none;
+    
+    @include desktop {
+        display: block;
+        padding-top: 47px;
+        padding-bottom: 94px;
+    }
 }
+
 
 
 .work-list {
     margin-top: 50px;
 
     display: flex;
+
+    /*@include tablet {
+        display: none;
+    }
+    
+    @include desktop {
+        display: flex;
+    }*/
 
 }
 

@@ -3,10 +3,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @include tablet {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
     
     @include desktop {
         padding-top: 94px;
@@ -26,9 +22,6 @@
 
     color: var(--contet-title-color);
 
-    @include tablet {
-        text-align: center;
-    }
     
     @include desktop {
         text-align: left;
@@ -51,14 +44,14 @@
 
     padding-top: 10px;
 
-    width: 450px;
+    max-width: 450px;
 
     @include tablet {
-        width: 354px;
+        max-width: 354px;
     }
 
     @include desktop {
-        width: 270px;
+        max-width: 270px;
     }
 }
 

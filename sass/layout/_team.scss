@@ -4,10 +4,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @include tablet {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
 
     @include desktop {
         padding-top: 94px;
@@ -18,10 +14,6 @@
 .team__title {
 
     margin-bottom: 30px;
-
-    @include tablet {
-            margin-bottom: 30px;
-        }
     
     @include desktop {
             margin-bottom: 50px;
