@@ -91,7 +91,14 @@
         <ul class="work-list list">
             <li class="work-item">
                 <div class="work-img-text">
-                <img src="./images/img.jpg" alt="Верстка" width="370"/>
+                <img
+                srcset="
+                ./images/img.jpg 1x, 
+                ./images/img-2x.jpg 2x
+                " 
+                src="./images/img.jpg" 
+                alt="Верстка" 
+                width="370"/>
                     <p class="work-bottom-text">
                         Десктопные Приложения
                     </p>
@@ -99,7 +106,14 @@
             </li>
             <li class="work-item">
                 <div class="work-img-text">
-                <img src="./images/img_1.jpg" alt="Дизайн" width="370"/>
+                <img
+                srcset="
+                ./images/img_1.jpg 1x, 
+                ./images/img_1-2x.jpg 2x
+                " 
+                src="./images/img_1.jpg" 
+                alt="Дизайн" 
+                width="370"/>
                 <p class="work-bottom-text">
                     Мобильные приложения
                 </p>
@@ -107,7 +121,14 @@
             </li>
             <li class="work-item">
                 <div class="work-img-text">
-                <img src="./images/img_2.jpg" alt="Оформление" width="370"/>
+                <img
+                srcset="
+                ./images/img_2.jpg 1x, 
+                ./images/img_2-2x.jpg 2x
+                " 
+                src="./images/img_2.jpg" 
+                alt="Оформление" 
+                width="370"/>
                 <p class="work-bottom-text">
                     Дизайнерские решения 
                 </p>
@@ -121,7 +142,31 @@
         <h2 class="team__title title">Наша команда</h2>
         <ul class="team__list list">
         <li class="team__item">
-            <img src="./images/img_3.jpg" alt="Мужчина в бордовой рубашке" width="270"/>
+            <picture>
+                <source srcset="
+                ./images/img_3.jpg    1x,
+                ./images/img_3-2x.jpg 2x
+                " 
+                media="(min-width: 1200px)"
+                />
+                <source srcset="
+                ./images/img_3-tab.jpg    1x,
+                ./images/img_3-tab-2x.jpg 2x
+                " 
+                media="(min-width: 768px)"
+                />
+                <source srcset="
+                ./images/img_3-mob.jpg    1x,
+                ./images/img_3-mob-2x.jpg 2x
+                " 
+                media="(min-width: 320px)"
+                />
+                <img 
+                src="./images/img_3-mob.jpg" 
+                alt="Мужчина в бордовой рубашке"
+                width="450" 
+                />
+            </picture>
             <div class="managers">
             <h3 class="managers__name">Игорь Демьяненко</h3>
             <p class="managers__position">Product Designer</p>
@@ -158,7 +203,11 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./images/img_4.jpg" alt="Женщина в пиджаке" width="270" />
+            <img
+            srcset="./images/img_4.jpg 1x, ./images/img_4-2x.jpg 2x" 
+            src="./images/img_4.jpg" 
+            alt="Женщина в пиджаке" 
+            width="270" />
             <div class="managers">
             <h3 class="managers__name">Ольга Репина</h3>
             <p class="managers__position">Frontend Developer</p>
@@ -195,7 +244,11 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./images/img_5.jpg" alt="Мужчина в белой рубашке" width="270" />
+            <img
+            srcset="./images/img_5.jpg 1x, ./images/img_5-2x.jpg 2x" 
+            src="./images/img_5.jpg" 
+            alt="Мужчина в белой рубашке" 
+            width="270" />
             <div class="managers">
             <h3 class="managers__name">Николай Тарасов</h3>
             <p class="managers__position">Marketing</p>
@@ -232,7 +285,22 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./images/img_6.jpg" alt="Мужчина в черной футболке" width="270" />
+            <picture>
+                <source 
+                srcset="
+                ./images/img_6.jpg 1x, 
+                ./images/img_6-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                />
+                <source
+                srcset=""
+            </picture>
+            <img
+            srcset="./images/img_6.jpg 1x, ./images/img_6-2x.jpg 2x" 
+            src="./images/img_6.jpg"
+            alt="Мужчина в черной футболке" 
+            width="270" />
             <div class="managers">
             <h3 class="managers__name">Михаил Ермаков</h3>
             <p class="managers__position">UI Designer</p>
