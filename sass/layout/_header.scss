@@ -1,10 +1,12 @@
 .header {
     background-color: #FFFFFF;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    //padding-top: 25px;
+    //padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border: 1px solid #ECECEC;
 
-    .container {
+    >.container {
         display: flex;
         align-items: center;
     }
@@ -17,7 +19,8 @@
 }
 
 .nav__list {
-    display: flex;
+      display: none;
+    //display: flex;
 }
 
 .connect__list {
@@ -112,6 +115,7 @@
 }
 
 .connect {
+    display: none;
     margin-left: auto;
 }
 
@@ -168,4 +172,85 @@
     transition-delay: 0;
 
     fill: currentColor;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 48px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+.mob-menu__list {
+    margin-bottom: 40px;
+}
+
+.mob-container {
+    //display: block;
+}
+
+.mob-menu__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.mob-menu__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+    color: #212121;
+}
+
+
+.mob-connect__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-tel__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+        /* identical to box height */
+    
+    letter-spacing: 0.02em;
+    
+    color: #2196F3;
+}
+
+.mob-mail__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    
+    color: #757575;
 }

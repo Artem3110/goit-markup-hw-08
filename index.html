@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!--<header class="header">
+    <header class="header">
         <div class="container">
             <nav class="nav">
                 <a href="" class="logo nav__logo link">Web<span class="logo__accent">Studio</span></a>
@@ -53,8 +53,51 @@
                     </li>
                 </ul>
             </div>
+            <button type="buton" class="menu-open-btn">
+                    <svg class="menu-btn-icon" width="40" height="40">
+                        <use href="./images/symbol-defs.svg#icon-menu-icon"></use>
+                    </svg>
+            </button>
         </div>
-    </header>-->
+        <div class="mob-menu">
+            <div class="container">
+            <div class="mob-menu-top">
+            <button type="buton" class="menu-close-btn">
+                <svg class="menu-btn-icon" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+        <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+                <a href="" class="mob-menu__link current link">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+                <a href="" class="mob-menu__link link">Контакты</a>
+            </li>
+        </ul>
+        </div>
+        <div class="mob-menu-bottom">
+        <div class="mob-connect">
+            <ul class="mob-connect__list list">
+                <li class="mob-connect__item">
+                    <a href="tel:+380961111111" class="mob-tel__link link">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mob-connect__item">
+                    <a href="mailto:info@devstudio.com" class="mob-mail__link link">
+                        info@devstudio.com
+                    </a>
+                </li>  
+            </ul>
+          </div>
+        </div>
+         </div>
+        </div>
+    </header>
     <main>
     <section class="hero">
         <div class="container"> 
@@ -601,5 +644,6 @@
     AOS.init();
 </script>
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>
