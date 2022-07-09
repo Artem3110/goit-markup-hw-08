@@ -20,7 +20,7 @@
     display: block;
 
     @include desktop {
-        display: flex;
+        display: inline-flex;
     }
     
 }
@@ -38,12 +38,26 @@
     text-align: center;
     margin-top: 60px;
 
+    @include tablet {
+        margin-left: 165px;
+        margin-top: 12px;
+    }
+
     @include desktop {
         margin-left: 70px;
         margin-top: 12px;
         text-align: left;
     }
 
+}
+
+.footer-contacts-connect {
+    display: block;
+    justify-content: center;
+
+    @include tablet {
+        display: flex;
+    }
 }
 
 .connect-title {
@@ -246,10 +260,19 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-align: center;
+    
 
     color: #FFFFFF;
 
     margin-bottom: 20px;
+
+    @include tablet {
+
+    }
+
+    @include desktop {
+        text-align: left;
+    }
 }
 
 .footer-mailing-input {
@@ -261,14 +284,19 @@
 }
 
 .footer-input {
-    width: 100%;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
     color: #FFFFFF;
+     margin-left: auto;
+     margin-right: auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 16px;
@@ -283,15 +311,20 @@
         line-height: 1.25;
            
     
-        display: flex;
-        align-items: center;
+     
         letter-spacing: 0.03em;
     
         color: rgba(255, 255, 255, 0.6);
     }
 
+    @include tablet {
+        margin-top: 0px;
+        width: 450px;
+    }
+
     @include desktop {
         margin-top: 0px;
+        width: 358px;
     }
 }
 
