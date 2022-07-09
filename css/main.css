@@ -400,6 +400,18 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
 
 .nav {
   display: flex;
@@ -409,19 +421,31 @@ body {
 .nav__list {
   display: none;
 }
-
-.connect__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
 }
 
 .nav__logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-right: 93px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__accent {
@@ -470,6 +494,36 @@ body {
   fill: var(--accent-color);
 }
 
+.connect {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .connect {
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.connect__list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .connect__list {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__list {
+    display: flex;
+  }
+}
+
 .connect__item {
   justify-content: center;
   transition-property: fill;
@@ -479,11 +533,6 @@ body {
 }
 .connect__item:not(:last-child) {
   margin-right: 50px;
-}
-
-.connect {
-  display: none;
-  margin-left: auto;
 }
 
 .connect__link {
@@ -500,6 +549,19 @@ body {
 .connect__link:hover, .connect__link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 768px) {
+  .connect__link {
+    font-size: 12px;
+    line-height: 1.16;
+    /* identical to box height */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
 
 .connect__mail {
   width: 16px;
@@ -514,6 +576,18 @@ body {
   transition-timing-function: var(--timing-function);
   transition-delay: 0;
   fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .connect__mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__mail {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .connect__tel {
@@ -530,13 +604,42 @@ body {
   transition-delay: 0;
   fill: currentColor;
 }
+@media screen and (min-width: 768px) {
+  .connect__tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__tel {
+    width: 10px;
+    height: 16px;
+  }
+}
 
-.menu-open-btn,
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: #FFFFFF;
+}
+.menu-open-btn:hover, .menu-open-btn:focus {
+  fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
 .menu-close-btn {
   display: block;
   margin-left: auto;
   border: none;
   background-color: #FFFFFF;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--accent-color);
 }
 
 .mob-menu {
@@ -574,6 +677,9 @@ body {
   letter-spacing: 0.02em;
   color: #212121;
 }
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--accent-color);
+}
 
 .mob-connect__item:not(:last-child) {
   margin-bottom: 32px;
@@ -587,7 +693,10 @@ body {
   line-height: 1.17;
   /* identical to box height */
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: #757575;
+}
+.mob-tel__link:hover, .mob-tel__link:focus {
+  color: var(--accent-color);
 }
 
 .mob-mail__link {
@@ -598,6 +707,63 @@ body {
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #757575;
+}
+.mob-mail__link:hover, .mob-mail__link:focus {
+  color: var(--accent-color);
+}
+
+.mob-soc__list {
+  display: flex;
+  padding-top: 64px;
+}
+
+.mob-soc__item {
+  position: relative;
+}
+
+.mob-soc-inst__item::after {
+  content: "";
+  position: absolute;
+  left: 95px;
+  top: 0;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-tw__item::after {
+  content: "";
+  position: absolute;
+  left: 69px;
+  top: 0;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-face__item::after {
+  content: "";
+  position: absolute;
+  left: 91px;
+  top: 0;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  /* identical to box height, or 122% */
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mob-soc__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .hero .container {
@@ -901,30 +1067,74 @@ body {
   margin-bottom: 16px;
 }
 
-.footer {
+.footer .container {
+  width: 100%;
+  justify-content: center;
   background-color: var(--accent-background-color);
   font-style: normal;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+  }
 }
 
 .footer-box {
-  display: inline-flex;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    display: flex;
+  }
+}
+
+.footer-contacts {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    text-align: left;
+  }
 }
 
 .footer-connect {
-  margin-left: 70px;
-  margin-top: 12px;
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-connect {
+    margin-left: 70px;
+    margin-top: 12px;
+    text-align: left;
+  }
+}
+
+.connect-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-bottom: 20px;
 }
 
 .footer-logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .footer-list {
@@ -994,6 +1204,7 @@ body {
 
 .connect-soc-list {
   display: flex;
+  margin: 0 auto;
 }
 
 .connect-soc-item {
@@ -1035,27 +1246,21 @@ body {
   transition-delay: 0;
 }
 
-.connect-soc {
-  padding-top: 72px;
-  padding-bottom: 100px;
-}
-
 .connect-soc-list {
-  margin-top: 20px;
-}
-
-.connect-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .footer-mailing {
-  padding-top: 12px;
-  padding-left: 93px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-mailing {
+    margin-top: 12px;
+    margin-left: 93px;
+  }
 }
 
 .footer-mailing-title {
@@ -1065,21 +1270,29 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
 .footer-mailing-input {
-  display: flex;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .footer-mailing-input {
+    display: flex;
+  }
 }
 
 .footer-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #FFFFFF;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding-left: 16px;
   background-color: #2F303A;
   cursor: pointer;
@@ -1095,6 +1308,11 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    margin-top: 0px;
+  }
+}
 
 .footer-btn {
   width: 200px;
@@ -1103,8 +1321,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  margin-top: 10px;
-  margin-left: 12px;
+  margin: 0 auto;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -1126,6 +1343,12 @@ body {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-btn {
+    margin-top: 0px;
+    margin-left: 12px;
+  }
 }
 
 .footer-send-icon {

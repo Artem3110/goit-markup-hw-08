@@ -11,7 +11,17 @@
         align-items: center;
     }
 
-}
+    @include tablet {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    @include desktop {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    }
 
 .nav {
     display: flex;
@@ -19,26 +29,39 @@
 }
 
 .nav__list {
-      display: none;
-    //display: flex;
+    display: none;
+
+    @include tablet {
+       display: flex;
+    }
 }
 
-.connect__list {
-    display: flex;
-}
+
 
 
 
 .nav__logo {
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
+
 
     color: var(--accent-color);
 
-    margin-right: 93px;
+
+    @include tablet {
+        margin-right: 88px;
+    }
+
+    @include desktop {
+        margin-right: 93px;
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
+
 }
 
 
@@ -102,6 +125,34 @@
     }
 }
 
+.connect {
+    display: none;
+    
+
+    @include tablet {
+        display: flex;
+        margin-left: auto;
+    }
+
+    @include desktop {
+        display: flex;
+        margin-left: auto;
+    }
+
+}
+
+.connect__list {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+        
+     @include desktop {
+        display: flex;
+    }
+}
+
 .connect__item {
     justify-content: center;
     transition-property: fill;
@@ -112,12 +163,11 @@
     &:not(:last-child) {
         margin-right: 50px;
     }
+
+
 }
 
-.connect {
-    display: none;
-    margin-left: auto;
-}
+
 
 .connect__link {
     font-weight: 500;
@@ -135,6 +185,17 @@
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+
+    @include tablet {
+        font-size: 12px;
+        line-height: 1.16;
+            /* identical to box height */
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 
@@ -155,6 +216,18 @@
 
     fill: currentColor;
 
+    @include tablet {
+        width: 14px;
+        height: 10px;
+    }
+        
+    @include desktop {
+        width: 16px;
+        height: 12px;
+    }
+
+
+
 }
 
 .connect__tel {
@@ -172,15 +245,47 @@
     transition-delay: 0;
 
     fill: currentColor;
+
+    @include tablet {
+        width: 10px;
+        height: 14px;
+    }
+        
+    @include desktop {
+        width: 10px;
+        height: 16px;
+    }
 }
 
-.menu-open-btn,
+.menu-open-btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: #FFFFFF;
+    
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+    
+    @include tablet {
+        display: none;
+    }
+}
+
 .menu-close-btn {
     display: block;
     margin-left: auto;
     border: none;
     background-color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
+
+
 
 
 
@@ -224,6 +329,11 @@
     letter-spacing: 0.02em;
     
     color: #212121;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 
@@ -241,7 +351,14 @@
     
     letter-spacing: 0.02em;
     
-    color: #2196F3;
+    color: #757575;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+
 }
 
 .mob-mail__link {
@@ -253,4 +370,66 @@
     letter-spacing: 0.02em;
     
     color: #757575;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob-soc__list {
+    display: flex;
+    padding-top: 64px;
+}
+
+.mob-soc__item {
+    position: relative;
+}
+
+.mob-soc-inst__item::after {
+    content: "";
+    position: absolute;
+    left: 95px;
+    top: 0;
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-tw__item::after {
+    content: "";
+    position: absolute;
+    left: 69px;
+    top: 0;
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-face__item::after {
+    content: "";
+    position: absolute;
+    left: 91px;
+    top: 0;
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+        /* identical to box height, or 122% */
+    
+    letter-spacing: 0.02em;
+    
+    color: #2196F3;
+      
+}
+
+.mob-soc__item:not(:last-child) {
+    margin-right: 20px;
 }
