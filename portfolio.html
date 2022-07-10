@@ -130,6 +130,7 @@
    <section class="portf">
        <div class="container">
        <ul class="portfolio-list-btn list">
+        <div class="port-top-btn">
         <li class="portfolio-item-btn">
             <button type="button" class="portfolio-btn-all btn">Все</button>
         </li>
@@ -139,19 +140,42 @@
         <li class="portfolio-item-btn">
             <button type="button" class="portfolio-btn btn">Приложения</button>
         </li>
+        </div>
+        <div class="port-bottom-btn">
         <li class="portfolio-item-btn">
             <button type="button" class="portfolio-btn btn">Дизайн</button>
         </li>
         <li class="portfolio-item-btn">
             <button type="button" class="portfolio-btn btn">Маркетинг</button>
         </li>
+        </div>
        </ul>
        <ul class="portfolio-list list">
           <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-              <a href="./images/img_7.jpg">
-                  <img src="./images/img_7.jpg" alt="Изображение людей на ноутбуке" width="367"/>
-              </a>
+                <picture>
+                <source srcset="
+                    ./images/img_7.jpg    1x,
+                    ./images/img_7-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_7-tab.jpg    1x,
+                    ./images/img_7-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                    <source srcset="
+                    ./images/img_7-mob.jpg    1x,
+                    ./images/img_7-mob-2x.jpg 2x
+                            " 
+                    media="(min-width: 320px)" />
+                    <img 
+                    src="./images/img_7-mob.jpg"
+                    alt="Изображение людей на ноутбуке"
+                    width="450" />
+                </picture>
               <p class="portfolio-top-text">
                 Ресурс предлагает комплексные 
                 предложения с разным уровнем
@@ -168,9 +192,30 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-              <a href="./images/img_8.jpg">
-                  <img src="./images/img_8.jpg" alt="Баскетболисты в полете" width="367" />
-              </a>
+                <picture>
+                <source srcset="
+                    ./images/img_8.jpg    1x,
+                    ./images/img_8-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                <source srcset="
+                    ./images/img_8-tab.jpg    1x,
+                    ./images/img_8-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_8-mob.jpg    1x,
+                    ./images/img_8-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                    <img 
+                    src="./images/img_8-mob.jpg" 
+                    alt="Баскетболисты в полете" 
+                    width="450" 
+                    />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -187,9 +232,31 @@
           </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_9.jpg">
-                <img src="./images/img_9.jpg" alt="Логотип ресторана" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_9.jpg    1x,
+                    ./images/img_9-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                    <source srcset="
+                        ./images/img_9-tab.jpg    1x,
+                        ./images/img_9-tab-2x.jpg 2x
+                        " 
+                        media="(min-width: 768px)" 
+                        />
+                    <source srcset="
+                        ./images/img_9-mob.jpg    1x,
+                        ./images/img_9-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)" 
+                        />
+                    <img 
+                    src="./images/img_9-mob.jpg"
+                    alt="Логотип ресторана" 
+                    width="450" 
+                    />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -206,9 +273,31 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_10.jpg">
-                <img src="./images/img_10.jpg" alt="Черные наушники" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_10.jpg    1x,
+                    ./images/img_10-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_10-tab.jpg    1x,
+                    ./images/img_10-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_10-mob.jpg    1x,
+                    ./images/img_10-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                    <img 
+                    src="./images/img_10-mob.jpg" 
+                    alt="Черные наушники" 
+                    width="450" 
+                    />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -225,9 +314,31 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_11.jpg">
-                <img src="./images/img_11.jpg" alt="Две коробки" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_11.jpg    1x,
+                    ./images/img_11-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_11-tab.jpg    1x,
+                    ./images/img_11-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_11-mob.jpg    1x,
+                    ./images/img_11-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                <img 
+                    src="./images/img_11-mob.jpg" 
+                    alt="Две коробки" 
+                    width="450" 
+                    />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -244,9 +355,30 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_12.jpg">
-                <img src="./images/img_12.jpg" alt="Включенный монитор компьютера" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_12.jpg    1x,
+                    ./images/img_12-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_12-tab.jpg    1x,
+                    ./images/img_12-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" />
+                <source srcset="
+                    ./images/img_12-mob.jpg    1x,
+                    ./images/img_12-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                <img 
+                src="./images/img_12-mob.jpg" 
+                alt="Включеный монитор компьютера" 
+                width="450" 
+                />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -263,9 +395,29 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_13.jpg">
-                <img src="./images/img_13.jpg" alt="Открытый журнал" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_13.jpg    1x,
+                    ./images/img_13-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_13-tab.jpg    1x,
+                    ./images/img_13-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_13-mob.jpg    1x,
+                    ./images/img_13-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                    <img src="./images/img_13-mob.jpg" 
+                    alt="Открытый журнал" 
+                    width="450" />
+                </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -282,9 +434,31 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_14.jpg">
-                <img src="./images/img_14.jpg" alt="Белый стикер" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_14.jpg    1x,
+                    ./images/img_14-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_14-tab.jpg    1x,
+                    ./images/img_14-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_14-mob.jpg    1x,
+                    ./images/img_14-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)" 
+                    />
+                <img 
+                src="./images/img_14-mob.jpg" 
+                alt="Белый стикер" 
+                width="450" 
+                />
+            </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
@@ -301,9 +475,31 @@
         </li>
         <li class="portfolio-item">
             <div class="portfolio-top-wrap">
-            <a href="./images/img_15.jpg">
-                <img src="./images/img_15.jpg" alt="Человек работает на ноутбуке" width="367" />
-            </a>
+                <picture>
+                <source srcset="
+                    ./images/img_15.jpg    1x,
+                    ./images/img_15-2x.jpg 2x
+                    " 
+                    media="(min-width: 1200px)" 
+                    />
+                <source srcset="
+                    ./images/img_15-tab.jpg    1x,
+                    ./images/img_15-tab-2x.jpg 2x
+                    " 
+                    media="(min-width: 768px)" 
+                    />
+                <source srcset="
+                    ./images/img_15-mob.jpg    1x,
+                    ./images/img_15-mob-2x.jpg 2x
+                    " 
+                    media="(min-width: 320px)" 
+                    />
+                <img 
+                src="./images/img_15-mob.jpg" 
+                alt="Человек работает на ноутбуке" 
+                width="450" 
+                />
+            </picture>
             <p class="portfolio-top-text">
                 Ресурс предлагает комплексные
                 предложения с разным уровнем
