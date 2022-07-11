@@ -23,7 +23,7 @@
     color: var(--contet-title-color);
 
     
-    @include desktop {
+    @include tablet{
         text-align: left;
     }
 

@@ -17,8 +17,8 @@
 
 
 .modal {
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
 
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -30,6 +30,11 @@
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: transform 500ms;
     padding: 40px;
+
+    @include desktop {
+        width: 528px;
+        min-height: 581px;
+    }
 }
 
 .modal-close-btn {
@@ -65,13 +70,17 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
 
     color: #212121;
 
     margin-bottom: 12px;
+
+    @include desktop {
+        line-height: 1.15;
+    }
 }
 
 .modal-input {
@@ -181,8 +190,9 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
+   
     /* identical to box height, or 171% */
 
     letter-spacing: 0.03em;
@@ -194,6 +204,11 @@
     align-items: center;
 
     margin-top: 10px;
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 /*.check-text::before {
@@ -257,7 +272,7 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    margin-left: 125px;
+    margin-left: 85px;
     margin-top: 30px;
 
     transition-property: background, box-shadow, border-radius;
@@ -270,6 +285,10 @@
         background: #188CE8;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
+    }
+
+    @include desktop {
+        margin-left: 125px;
     }
 }
 
